@@ -44,16 +44,16 @@ main = do
           putStrLn ("F[" ++ show i ++ "] = " ++ show (round v) ++ " (" ++ show v ++ ")")
         FibByList fib -> do
           putStrLn ("F[" ++ show i ++ "] = " ++ show (fib !! i))
-    method:"atS":m:_ -> do
+    method:"atMod":m:_ -> do
       i <- readIO m
       case fibByMethod method of
         FibByFn fib -> do
-          putStrLn ("F[" ++ show i ++ "] = " ++ show (fib i `mod` 10000))
+          putStrLn ("F[" ++ show i ++ "] === " ++ show (fib i `mod` 10000) ++ " mod 10000")
         FibByFnDouble fib -> do
           let v = fib i
-          putStrLn ("F[" ++ show i ++ "] = " ++ show (round v `mod` 10000))
+          putStrLn ("F[" ++ show i ++ "] === " ++ show (round v `mod` 10000) ++ " mod 10000")
         FibByList fib -> do
-          putStrLn ("F[" ++ show i ++ "] = " ++ show (fib !! i `mod` 10000))
+          putStrLn ("F[" ++ show i ++ "] === " ++ show (fib !! i `mod` 10000) ++ " mod 10000")
     method:"sum":m:_ -> do
       m <- readIO m
       case fibByMethod method of
