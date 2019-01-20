@@ -7,7 +7,8 @@ import qualified BinetDouble
 import qualified BinetSqrt5
 import qualified BinetPhi
 import qualified MatFib
-import qualified FastFib
+import qualified FibPair
+import qualified FastDoubling
 import System.Environment
 import Control.Monad
 
@@ -24,8 +25,10 @@ fibByMethod "Iter" = FibByFn IterFib.fib
 fibByMethod "IterL" = FibByFn IterFib.fibL
 fibByMethod "IterM" = FibByFn IterFib.fibM
 fibByMethod "Mat" = FibByFn MatFib.fib
-fibByMethod "Fast" = FibByFn FastFib.fib
-fibByMethod "FastX" = FibByFn FastFib.fibX
+fibByMethod "FibPair" = FibByFn FibPair.fib
+fibByMethod "FibPairX" = FibByFn FibPair.fibX
+fibByMethod "FibPairD" = FibByFn FibPair.fibD
+fibByMethod "FastDoubling" = FibByFn FastDoubling.fib
 fibByMethod "BinetDouble" = FibByFnDouble BinetDouble.fib
 fibByMethod "BinetDoubleP" = FibByFnDouble BinetDouble.fibP
 fibByMethod "BinetSqrt5" = FibByFn BinetSqrt5.fib
