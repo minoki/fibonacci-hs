@@ -25,6 +25,7 @@ fibByMethod "IterL" = FibByFn IterFib.fibL
 fibByMethod "IterM" = FibByFn IterFib.fibM
 fibByMethod "Mat" = FibByFn MatFib.fib
 fibByMethod "Fast" = FibByFn FastFib.fib
+fibByMethod "FastX" = FibByFn FastFib.fibX
 fibByMethod "BinetDouble" = FibByFnDouble BinetDouble.fib
 fibByMethod "BinetDoubleP" = FibByFnDouble BinetDouble.fibP
 fibByMethod "BinetSqrt5" = FibByFn BinetSqrt5.fib
