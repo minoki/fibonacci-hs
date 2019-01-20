@@ -3,10 +3,11 @@ import qualified VerySlowFib
 import qualified ListMemo
 import qualified ListFib
 import qualified IterFib
-import qualified MatFib
 import qualified BinetDouble
 import qualified BinetSqrt5
 import qualified BinetPhi
+import qualified MatFib
+import qualified FastFib
 import System.Environment
 import Control.Monad
 
@@ -23,9 +24,11 @@ fibByMethod "Iter" = FibByFn IterFib.fib
 fibByMethod "IterL" = FibByFn IterFib.fibL
 fibByMethod "IterM" = FibByFn IterFib.fibM
 fibByMethod "Mat" = FibByFn MatFib.fib
+fibByMethod "Fast" = FibByFn FastFib.fib
 fibByMethod "BinetDouble" = FibByFnDouble BinetDouble.fib
 fibByMethod "BinetDoubleP" = FibByFnDouble BinetDouble.fibP
 fibByMethod "BinetSqrt5" = FibByFn BinetSqrt5.fib
+fibByMethod "BinetSqrt5Half" = FibByFn BinetSqrt5.fibH
 fibByMethod "BinetPhi" = FibByFn BinetPhi.fib
 fibByMethod "BinetPhiI" = FibByFn BinetPhi.fibI
 fibByMethod _ = error "Unknown method"

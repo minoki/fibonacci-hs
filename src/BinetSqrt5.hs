@@ -27,3 +27,8 @@ fib :: Int -> Integer
 fib i = case (phi^i - psi^i) / sqrt5 of
           Ext_sqrt5 x 0 | denominator x == 1 -> numerator x
           x -> error $ "calculation error: fib " ++ show i ++ " = " ++ show x
+
+fibH :: Int -> Integer
+fibH i = case 2 * phi^i of
+           Ext_sqrt5 _ x | denominator x == 1 -> numerator x
+           x -> error $ "calculation error: phi^" ++ show i ++ " = " ++ show x
